@@ -21,3 +21,10 @@ two:
     et aliquet velit dictum. Proin fermentum nibh id odio ornare tristique. 
   image_url: Hell.png
   price: 19.99
+
+javascript:
+  title: Definitive Javascript
+  description: A very think reference book. 
+    Keep this book under your pillow as a reference.
+  image_url: js.gif
+  price: 10.54
