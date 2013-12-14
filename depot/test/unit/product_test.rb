@@ -53,13 +53,14 @@ class ProductTest < ActiveSupport::TestCase
     end
   end
 
-  test "product is not valid without a unique title" do
+  test "product is not valid without a unique title - i18n" do
     product = Product.new(
-	    :title => products(:javascript).title,
-	    :description => "hello",
-	    :image_url => "js.png",
-	    :price => 34.90)
+      :title => products(:javascript).title,
+      :description => "hello",
+      :image_url => "js.png",
+      :price => 34.90)
     assert !product.save
-    assert_equal "has already been taken", product.errors[:title].join('; ')
+    assert_equal I18n.translate('activerecord.errors.messages.taken'),
+      product.errors[:title].join('; ')
   end
 end
