@@ -1,5 +1,8 @@
 class Product < ActiveRecord::Base
   attr_accessible :description, :image_url, :price, :title
+
+  default_scope :order => 'title'
+
   validates :title, :description, :image_url, :presence => true
   validates :title, :length => { 
     :minimum => 10,
