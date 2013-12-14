@@ -1,13 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
-  image_url: MyString
+  title: GoodYBack
+  description: Ut malesuada enim elit, 
+    tincidunt bibendum mi fermentum at. Phasellus justo libero, 
+    suscipit dictum mi eu, malesuada semper risus. 
+    maecenas accumsan eleifend ligula, at scelerisque nulla aliquam quis.
+    Donec quis porttitor mi. Vestibulum ultrices ante at arcu egestas,
+    et aliquet velit dictum. Proin fermentum nibh id odio ornare tristique. 
+  image_url: MyString.jpg
   price: 9.99
 
 two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: CookGood
+  description: Ut malesuada enim elit, 
+    tincidunt bibendum mi fermentum at. Phasellus justo libero, 
+    suscipit dictum mi eu, malesuada semper risus. 
+    maecenas accumsan eleifend ligula, at scelerisque nulla aliquam quis.
+    Donec quis porttitor mi. Vestibulum ultrices ante at arcu egestas,
+    et aliquet velit dictum. Proin fermentum nibh id odio ornare tristique. 
+  image_url: Hell.png
+  price: 19.99
