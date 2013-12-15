@@ -2,6 +2,7 @@
     <p id="notice"><%= notice %></p>
 <% end %>
 
+You've visited this page <%= pluralize(@counter, "time") %>.
 <h1>Your Pragmatic Catalog</h1>
 <% @products.each do |product| %>
     <div class="entry">
