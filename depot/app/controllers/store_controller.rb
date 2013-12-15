@@ -8,5 +8,6 @@ class StoreController < ApplicationController
   def index
     @products = Product.all
     @counter = increment_counter
+    @message = "You've visited this page #{@counter} times" if @counter > 5
   end
 end

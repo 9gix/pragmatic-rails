@@ -2,7 +2,10 @@
     <p id="notice"><%= notice %></p>
 <% end %>
 
-You've visited this page <%= pluralize(@counter, "time") %>.
+<% if @message %>
+    <p id="notice"><%= @message %></p>
+<% end %>
+
 <h1>Your Pragmatic Catalog</h1>
 <% @products.each do |product| %>
     <div class="entry">
