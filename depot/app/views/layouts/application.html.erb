@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>Depot</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "scaffold" %>
+  <%= stylesheet_link_tag    "depot", :media => "all" %>
+  <%= javascript_include_tag :default %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div id="store">
+    <div id="banner">
+      <%= image_tag("logo.png") %>
+      <%= @page_title || "Pragmatic Bookshelf" %>
+    </div>
+    <div id="column">
+      <div id="side">
+        <a href="/">Main</a><br />
+        <a href="/faq/">Questions</a><br />
+        <a href="/news/">News</a><br />
+        <a href="/contact/">Contact</a><br />
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
