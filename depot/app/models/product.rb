@@ -1,6 +1,10 @@
 class Product < ActiveRecord::Base
   attr_accessible :description, :image_url, :price, :title
 
+  has_many :line_items
+
+  before_destroy :is_not_refered_in_line_item
+
   default_scope :order => 'title'
 
   validates :title, :description, :image_url, :presence => true
@@ -13,4 +17,14 @@ class Product < ActiveRecord::Base
     :with => %r{\.(jpg|gif|png)$}i,
     :message => 'must be a URL for GIF, JPG or PNG image' 
   }
+
+  private
+  def is_not_refered_in_line_item
+    if line_items.empty?
+      return true
+    else
+      errors.add(:base, "Line items present")
+      return false
+    end
+  end
 end
