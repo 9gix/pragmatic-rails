@@ -149,3 +149,8 @@
     color: #bfb;
     font-size: small;
 }
+
+#side ul {
+    color: #bfb;
+    list-style: none;
+}

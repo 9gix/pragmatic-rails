@@ -15,10 +15,13 @@
     </div>
     <div id="columns">
       <div id="side">
-        <a href="/">Main</a><br />
-        <a href="/faq/">Questions</a><br />
-        <a href="/news/">News</a><br />
-        <a href="/contact/">Contact</a><br />
+        <ul>
+          <li><a href="/">Main</a></li>
+          <li><a href="/faq/">Questions</a></li>
+          <li><a href="/news/">News</a></li>
+          <li><a href="/contact/">Contact</a></li>
+	  <li><%= time.strftime("%I:%M %p") %></li>
+       </ul>
       </div>
       <div id="main">
         <%= yield %>
