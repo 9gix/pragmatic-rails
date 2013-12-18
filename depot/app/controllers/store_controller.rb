@@ -9,5 +9,6 @@ class StoreController < ApplicationController
     @products = Product.all
     @counter = increment_counter
     @message = "You've visited this page #{@counter} times" if @counter > 5
+    @cart = current_cart
   end
 end
